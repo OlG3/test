@@ -37,18 +37,42 @@
 
 
 // рахує кількість парних чисел в проміжку між введеними числами
-$result = [];
+//$result = [];
+//
+//if(!empty($_POST['submit_diget'] == 'Submit')){ // перевірка на встановлення значення
+//
+//    for ($i = $_POST['first_numb']+1; $i < $_POST['second_numb']; $i++){
+//        if($i % 2 == 0){
+//            $result[] = $i;
+//        }
+//    }
+//    $count = count($result);
+//}
+//echo $count;
 
-if(!empty($_POST['submit_diget'] == 'Submit')){ // перевірка на встановлення значення
 
-    for ($i = $_POST['first_numb']+1; $i < $_POST['second_numb']; $i++){
-        if($i % 2 == 0){
-            $result[] = $i;
-        }
+
+//виводить найменше число по типу 635981 - рез. = 1
+
+$arr = []
+
+$var = $_POST['numb'];
+
+if(!empty($_POST['submit_diget'] == 'Submit')){
+
+    $numbers = preg_split('//', $var, -1, PREG_SPLIT_NO_EMPTY);
+
+    if() {
+        echo min($numbers);
     }
-    $count = count($result);
+
 }
-echo $count;
+
+
+
+
+
+
 
 
 
