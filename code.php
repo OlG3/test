@@ -52,22 +52,32 @@
 
 
 
-//виводить найменше число по типу 635981 - рез. = 1
+//виводить найменше число по типу 635981 - рез. = 1, але
 
-$arr = []
+//$var = $_POST['numb'];
+//
+//if(!empty($_POST['submit_diget'] == 'Submit')){
+//
+//    $numbers = preg_split('//', $var, -1, PREG_SPLIT_NO_EMPTY);
+//
+//    return( trim($numbers)!='');
+//
+//    echo min($numbers);
+//    print_r($numbers);
+//}
 
-$var = $_POST['numb'];
 
-if(!empty($_POST['submit_diget'] == 'Submit')){
+$ar = $_POST['numb'];
 
-    $numbers = preg_split('//', $var, -1, PREG_SPLIT_NO_EMPTY);
+$min = $ar[0];
 
-    if() {
-        echo min($numbers);
+for ($i = 0; $i < count($ar); $i++){
+    if ($min > $ar[$i]) {
+        $min = $ar[$i];
     }
-
 }
 
+echo $min;
 
 
 
