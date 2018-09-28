@@ -1,96 +1,76 @@
 <?php
-//echo '<pre>';
-//
-//print_r($_POST);
-//
-//echo '<pre>';
 
-
-//Введене число більше чи менше нуля
-//    if(/*empty($_POST['numb']) == false &&*/ is_numeric($_POST['numb'])) {
-//
-//        $numb = $_POST['numb'];
-//
-//        if ($numb > 0) {
-//            echo('The number more than 0');
-//        } else if ($numb < 0) {
-//            echo('The number less than 0');
-//        } else if ($numb == 0) {
-//            echo('The number equal zero');
-//        } else {
-//            echo('This is not a number');
-//
-//        }
-//    }
-
-// рахує кількість слів в реченні. Не працює для кирилиці.
-//$var = $_POST['numb'];
-//
-//$counts = str_word_count($var);
-//
-//echo($counts);
-//echo "<pre>";
-//print_r($_POST);
-//echo "</pre>";
-//die('1');
-//$var1 = $_POST['first_numb'];
-
-
-// рахує кількість парних чисел в проміжку між введеними числами
-//$result = [];
-//
-//if(!empty($_POST['submit_diget'] == 'Submit')){ // перевірка на встановлення значення
-//
-//    for ($i = $_POST['first_numb']+1; $i < $_POST['second_numb']; $i++){
-//        if($i % 2 == 0){
-//            $result[] = $i;
-//        }
-//    }
-//    $count = count($result);
+//затестувати згодом
+//function trans($s){
+//  $s = strtr($s, array('а'=>'a','б'=>'b','в'=>'v','г'=>'g','д'=>'d','е'=>'e','ё'=>'e','ж'=>'j','з'=>'z','и'=>'i','й'=>'y','к'=>'k','л'=>'l','м'=>'m','н'=>'n','о'=>'o','п'=>'p','р'=>'r','с'=>'s','т'=>'t','у'=>'u','ф'=>'f','х'=>'h','ц'=>'c','ч'=>'ch','ш'=>'sh','щ'=>'shch','ы'=>'y','э'=>'e','ю'=>'yu','я'=>'ya','ъ'=>'','ь'=>''));
+//  return $s;
 //}
-//echo $count;
-
-
-
-//виводить найменше число по типу 635981 - рез. = 1, але
-
-//$var = $_POST['numb'];
 //
-//if(!empty($_POST['submit_diget'] == 'Submit')){
-//
-//    $numbers = preg_split('//', $var, -1, PREG_SPLIT_NO_EMPTY);
-//
-//    return( trim($numbers)!='');
-//
-//    echo min($numbers);
-//    print_r($numbers);
+//function translit($text){
+//  $arr = [];
+//  $split = explode("", $text);
+//  $arr[] = $split;
+//  var_dump($arr);
 //}
+//var_dump(translit('test'));
 
+/* ТРАНСЛІТЕРАЦІЯ З РОС НА ІНГЛІШ
 
-$ar = $_POST['numb'];
-
-$min = $ar[0];
-
-for ($i = 0; $i < count($ar); $i++){
-    if ($min > $ar[$i]) {
-        $min = $ar[$i];
-    }
+function translit($textcyr){
+$cyr = [
+  'а','б','в','г','д','е','ё','ж','з','и','й','к','л','м','н','о','п',
+  'р','с','т','у','ф','х','ц','ч','ш','щ','ъ','ы','ь','э','ю','я',
+  'А','Б','В','Г','Д','Е','Ё','Ж','З','И','Й','К','Л','М','Н','О','П',
+  'Р','С','Т','У','Ф','Х','Ц','Ч','Ш','Щ','Ъ','Ы','Ь','Э','Ю','Я'
+];
+$lat = [
+  'a','b','v','g','d','e','io','zh','z','i','y','k','l','m','n','o','p',
+  'r','s','t','u','f','h','ts','ch','sh','sht','a','i','y','e','yu','ya',
+  'A','B','V','G','D','E','Io','Zh','Z','I','Y','K','L','M','N','O','P',
+  'R','S','T','U','F','H','Ts','Ch','Sh','Sht','A','I','Y','e','Yu','Ya'
+];
+return str_replace($cyr, $lat, $textcyr);
 }
 
-echo $min;
+
+echo translit('что тут не то');
+*/
 
 
 
+/*
+
+function func($numb, $fir, $sec, $third){
+
+  if($num == 1){
+    return $numb.' '.$fir;
+  }
+  else if($numb > 1 AND $numb <= 4){
+    return $numb.' '.$sec;
+  }
+  else{
+    return $numb.' '.$third;
+  }
+}
+
+echo func(-1, 'яблоко', 'яблока', 'яблок');
+
+*/
 
 
+/* string treem
+function cut($string, $numb = 10){
+  return substr($string, 0, $numb);
+}
+
+echo(cut('string'));
+*/
 
 
+$numb = [1,2,3,4,5,6];
 
-//echo "<pre>";
-//print_r($result);
-//echo "</pre>";
+function func(){
+  return end($numb);
+}
 
-
-
-
-
+echo func();
