@@ -67,10 +67,197 @@ echo(cut('string'));
 */
 
 
-$numb = [1,2,3,4,5,6];
 
-function func(){
-  return end($numb);
+// lucky ticket ?????????
+
+//$arr = [];
+//
+//function func($numb){
+//
+//  $arr[] = preg_split('//',$numb, -1, PREG_SPLIT_NO_EMPTY);
+//
+//  $test = intval($arr);
+//
+//  var_dump($arr);
+//
+//  if(($arr[0] + $arr[1] + $arr[2]) == ($arr[3] + $arr[4] + $arr[5])){
+//    echo 'Its your lucky ticket';
+//  }
+//
+//}
+//
+//
+//
+//func(233333);
+
+
+
+//if(isset($_REQUEST['hello']) and $_REQUEST['hello'] == 0){
+//  echo 'не отмечен';
+//}
+//
+//if (isset($_REQUEST['hello']) and $_REQUEST['hello'] == 1) {
+//  echo 'отмечен';
+//}
+
+
+//function input($name, $value)
+//{
+//  if(isset($_REQUEST[$name])) {
+//    $value = $_REQUEST[$name];
+//  }
+//
+//  return '<input type="text" name="'.$name.'" value="'.$value.'">';
+//}
+//
+//echo input(Oleg, 25);
+
+//
+//if (isset($_REQUEST['hello']) and $_REQUEST['hello'] == 0) {
+//  echo 'Прощай '.$_REQUEST['name'];
+//}
+//
+//if (isset($_REQUEST['hello']) and $_REQUEST['hello'] == 1) {
+//  echo 'Привет '.$_REQUEST['name'];
+//}
+//
+
+
+   //Languages what you know
+
+
+/*
+if(isset($_POST['html']) or ($_POST['js']) or ($_POST['php']) or ($_POST['ruby']) == 1){
+
+  echo 'You know:<br>';
+
+  if($_POST['html']){
+    echo 'html<br>';
+  }
+  if($_POST['js']){
+    echo 'js<br>';
+  }
+  if($_POST['php']){
+    echo 'php<br>';
+  }
+  if($_POST['ruby']){
+    echo 'ruby<br>';
+  }
+}*/
+
+
+
+//
+
+/*
+
+if (isset($_REQUEST['php']) and $_REQUEST['php'] == 0) {
+  echo 'Вы не знаете PHP';
 }
 
-echo func();
+if (isset($_REQUEST['php']) and $_REQUEST['php'] == 1) {
+  echo 'Вы  знаете PHP!';
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
