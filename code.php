@@ -52,7 +52,13 @@ if(mysqli_connect_errno()) {
 //$query = "INSERT INTO news VALUES (NULL, 'Some header', 'abc content', 'full content', '2', '2', CURRENT_TIMESTAMP , '2', '1', '1');";
 //$query = "INSERT INT news_category VALUES (NULL, 'value111','desc111',1,1);";
 //$query = "INSERT INTO news_category(name, description) VALUES('name1','desc1'), ('name2','desc2');";
-$query = "DELETE FROM user WHERE `id`=16;";
+//$query = "DELETE FROM user WHERE `id`=16;";
+
+//$query = "INSERT INTO user SET name='Джон', age=20";
+//$query = "INSERT INTO user (name, age) VALUES ('Катя', 20), ('Юля', 25), ('Женя', 30)";
+
+$query = "SELECT * FROM user WHERE id>0 ORDER BY age";
+
 
 
 
