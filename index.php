@@ -12,6 +12,17 @@
         <input type="text" name="numb" id="id_numb">
         <input type="submit" name="submit_diget">
     </form>-->
+
+
+   <form action="" method="POST">
+       <input name="name" >
+       <input name="age" >
+       <input type="submit" value="добавить работника">
+   </form>
+
+   <br/>
+
+
    <table>
        <tr>
            <th>id</th>

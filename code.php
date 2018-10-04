@@ -71,6 +71,20 @@ if (isset($_GET['del'])) {
 }
 
 
+
+//добавление юзера
+
+if (!empty($_POST)) {
+  $name = $_POST['name'];
+  $age = $_POST['age'];
+
+  $query = "INSERT INTO user SET name=$name, age=$age";
+  mysqli_query($con, $query) or die(mysqli_error($con));
+}
+
+
+
+
 $result = '';
 
 foreach ($data as $elem) {
