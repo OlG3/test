@@ -57,7 +57,57 @@ if(mysqli_connect_errno()) {
 //$query = "INSERT INTO user SET name='Джон', age=20";
 //$query = "INSERT INTO user (name, age) VALUES ('Катя', 20), ('Юля', 25), ('Женя', 30)";
 
-$query = "SELECT * FROM user WHERE id>0 ORDER BY age";
+
+$query = "SELECT * FROM user";
+$result = mysqli_query($con, $query) or die(mysqli_error($con));
+for ($data = []; $row = mysqli_fetch_assoc($result); $data[] = $row);
+
+
+// Удаление по id (до получения!):
+if (isset($_GET['del'])) {
+  $del = $_GET['del'];
+  $query = "DELETE FROM user WHERE id=$del";
+  mysqli_query($con, $query) or die(mysqli_error($con));
+}
+
+
+$result = '';
+
+foreach ($data as $elem) {
+  $result .= '<tr>';
+
+  $result .= '<td>' . $elem['id'] . '</td>';
+  $result .= '<td>' . $elem['name'] . '</td>';
+  $result .= '<td>' . $elem['age'] . '</td>';
+  $result .= '<td><a href="?del=' . $elem['id'] . '">удалить</a></td>';
+
+
+  $result .= '</tr>';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
