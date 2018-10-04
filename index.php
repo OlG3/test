@@ -15,8 +15,8 @@
 
 
    <form action="" method="POST">
-       <input name="name" >
-       <input name="age" >
+       <input name="name">
+       <input name="age">
        <input type="submit" value="добавить работника">
    </form>
 

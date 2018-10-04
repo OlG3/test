@@ -62,6 +62,14 @@ $query = "SELECT * FROM user";
 $result = mysqli_query($con, $query) or die(mysqli_error($con));
 for ($data = []; $row = mysqli_fetch_assoc($result); $data[] = $row);
 
+// Сохранение нового (до получения!):
+if (!empty($_POST)) {
+  $name = $_POST['name'];
+  $age = $_POST['age'];
+
+  $query = "INSERT INTO user SET name='$name', age='$age'";
+  mysqli_query($con, $query) or die(mysqli_error($con));
+}
 
 // Удаление по id (до получения!):
 if (isset($_GET['del'])) {
@@ -70,23 +78,13 @@ if (isset($_GET['del'])) {
   mysqli_query($con, $query) or die(mysqli_error($con));
 }
 
+// Получение всех работников:
+$query = "SELECT * FROM user";
+$result = mysqli_query($con, $query) or die(mysqli_error($con));
+for ($data = []; $row = mysqli_fetch_assoc($result); $data[] = $row);
 
-
-//добавление юзера
-
-if (!empty($_POST)) {
-  $name = $_POST['name'];
-  $age = $_POST['age'];
-
-  $query = "INSERT INTO user SET name=$name, age=$age";
-  mysqli_query($con, $query) or die(mysqli_error($con));
-}
-
-
-
-
+// Вывод на экран:
 $result = '';
-
 foreach ($data as $elem) {
   $result .= '<tr>';
 
@@ -94,7 +92,6 @@ foreach ($data as $elem) {
   $result .= '<td>' . $elem['name'] . '</td>';
   $result .= '<td>' . $elem['age'] . '</td>';
   $result .= '<td><a href="?del=' . $elem['id'] . '">удалить</a></td>';
-
 
   $result .= '</tr>';
 }
